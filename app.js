@@ -23,6 +23,7 @@ app.use('/api/users', registerRouter)
 
 
 app.post('/register', registerRouter)
+app.post('/activation', registerRouter)
 app.listen(PORT, () => {
     console.log(`Server started on port: ${PORT}`)
 })
