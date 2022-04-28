@@ -9,7 +9,6 @@
   },
   "scripts": {
     "test": "NODE_ENV=development node app.js",
-    "build": "NODE_ENV=production node .",
     "start": "node ."
   },
   "repository": {
