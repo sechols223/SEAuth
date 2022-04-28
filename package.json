@@ -4,7 +4,8 @@
   "description": "A system to add an authentication layer to an application",
   "main": "app.js",
   "engines": {
-    "node": "17.x"
+    "node": "17.x",
+    "npm": "8.x"
   },
   "scripts": {
     "test": "NODE_ENV=development node app.js",
