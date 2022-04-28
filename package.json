@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A system to add an authentication layer to an application",
   "main": "app.js",
+  "engines:" {
+    "node": "17.x"
+  },
   "scripts": {
     "test": "NODE_ENV=production node app.js",
     "build": "export NODE_ENV=production node /src/app.js",
