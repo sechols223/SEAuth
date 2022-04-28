@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A system to add an authentication layer to an application",
   "main": "app.js",
-  "engines:" {
+  "engines": {
     "node": "17.x"
   },
   "scripts": {
