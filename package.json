@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "NODE_ENV=development node app.js",
-    "build": "NODE_ENV=production node /src/app.js",
-    "start": "node ./src/app.js"
+    "build": "NODE_ENV=production node app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
