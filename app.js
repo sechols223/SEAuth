@@ -26,3 +26,5 @@ app.post('/register', registerRouter)
 app.listen(PORT, () => {
     console.log(`Server started on port: ${PORT}`)
 })
+
+module.exports = app;
