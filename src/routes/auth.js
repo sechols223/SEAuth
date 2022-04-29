@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router();
 const {authenticateToken} = require('../middleware/auth.middleware')
+
+
 router.get('/auth', authenticateToken, (req,res) => {
     res.status(200).json(
         {
@@ -12,3 +14,5 @@ router.get('/auth', authenticateToken, (req,res) => {
         }
     )
 })
+
+module.exports = router;

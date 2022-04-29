@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
 const UserSchema =mongoose.Schema({
     email: {
@@ -57,7 +58,7 @@ UserSchema.pre("save", function (next) {
 
   UserSchema.methods.generateToken = function (cb) {
     let user = this;
-    let token = jwt.sign(user._id.toHexString(), config.PERSIST_LOGIN_SECRET);
+    let token = jwt.sign(user._id.toHexString(), process.env.JWT_TOKEN);
   
     user.token = token;
     user.save(function (err, user) {
@@ -71,7 +72,7 @@ UserSchema.pre("save", function (next) {
   UserSchema.statics.findByToken = function (token, callback) {
     var user = this;
   
-    jwt.verify(token, config.PERSIST_LOGIN_SECRET, function (err, decode) {
+    jwt.verify(token, process.env.JWT_TOKEN, function (err, decode) {
      
       user.findOne({ _id: decode, token: token }, function (err, user) {
         if (err) {
