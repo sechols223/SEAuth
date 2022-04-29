@@ -8,7 +8,7 @@
     "npm": "8.x"
   },
   "scripts": {
-    "test": "NODE_ENV=development node app.js",
+    "test": "NODE_ENV=development nodemon app.js",
     "start": "node ."
   },
   "repository": {
